@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* font-family: "Inter", sans-serif; */
+  font-family: sfpFontRegular, Verdana, Arial, Helvetica, sans-serif;
+  background-color: #121212;
+  /* background-color: red; */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 640px;
+  padding: 20px;
+}
+
+.coupon_tab {
+  overflow: hidden;
+  margin: 10px 15px;
+  height: 44px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 44px;
+  border: 1px solid #444444;
+}
+
+.topcenter {
+  display: flex;
+  align-items: center;
+}
+
+.coupon_tab .coupon_tab_item {
+  background: #222122;
+}
+
+.coupon_tab .coupon_tab_item.sel {
+  background: #444444;
+  color: #fff;
+}
+
+.boxflex {
+  flex: 1;
+}
+
+/* bottom tab */
+.coupon_tab_2j {
+  overflow: hidden;
+  margin: 10px -15px 15px;
+}
+
+.coupon_tab_2j .coupon_tab_item {
+  color: #c2c2c2;
+  border-bottom: 1px solid #333333;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+
+.coupon_tab_2j .coupon_tab_item.sel {
+  color: #16bb50;
+  border-bottom: 2px solid #16bb50;
+}
+
+/* sport ticket */
+.sportCouponContent,
+.sportFreebetContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ticket-container {
+  margin-top: 30px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  padding: 13px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* cursor: pointer; */
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.ticket-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 69%;
+  border-left: 3px dashed #e4e4e4;
+  padding-left: 10px;
+}
+
+.ticket-section {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  /* width: fit-content; */
+}
+
+.ticket-label {
+  font-size: 12px;
+  color: #555;
+  font-weight: 400;
+}
+
+.fa-circle-question {
+  position: relative;
+  cursor: pointer;
+  color: rgb(164, 162, 162);
+  font-size: 12px;
+}
+
+.ticket-value {
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ticket-tier {
+  /* color: #15803d; */
+  color: lightcoral;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.separator {
+  border-left: 3px dashed #e4e4e4;
+  height: 100%;
+  position: absolute;
+  left: 30%;
+  top: 0;
+  bottom: 0;
+}
+
+.rounded-shape,
+.rounded-shape2 {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #121212;
+}
+
+.rounded-shape {
+  /* top: -10px; */
+  top: 50%;
+  right: -10px;
+}
+
+.rounded-shape2 {
+  /* bottom: -10px; */
+  top: 50%;
+  left: -10px;
+}
+
+/* tooltip */
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  top: 150%;
+  left: 0;
+  right: 0;
+  transform: translateX(-50%);
+  z-index: 10;
+  max-width: 90%;
+  word-wrap: break-word;
+  white-space: normal;
+  font-family: sfpFontRegular, Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* tooltip */
+/* .tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  top: 150%;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-family: "Inter", sans-serif;
+} */
+
+/* tooltip on hover */
+.expla-cont:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* progress bar */
+.track {
+  background-color: #e4e4e4;
+  height: 8px;
+  width: 100%;
+  border-radius: 20px;
+  position: relative;
+}
+
+.progress {
+  background-color: #15803d;
+  height: 8px;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+}
+
+.percentage {
+  color: #16bb50;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* button */
+.ticket-details .button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.button-container a {
+  /* background: #007aff; */
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  width: 100%;
+  max-width: 172px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+}
+
+.button-container button {
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+.sportCouponContent .filter {
+  margin-top: 10px;
+  width: 50%;
+  background: transparent;
+  border: 1px solid #444444;
+  padding: 10px 12px;
+  color: #fff;
+  display: flex;
+}
+
+/* drop down content */
+.toggle-arrow {
+  cursor: pointer;
+  font-size: 8px;
+  color: rgb(164, 162, 162);
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #e8e8e8;
+}
+
+.explanation-content {
+  display: none;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  margin-top: -10px;
+  border-radius: 5px;
+  /* position: absolute; */
+  top: 90%;
+  left: 0px;
+  right: 0px;
+  /* z-index: 10; */
+  font-size: 12px;
+  line-height: 20px;
+  color: gray;
+}
+
+.explanation-content ul {
+  padding: 10px 0px 0px 20px;
+}
+
+/* staking history */
+.legend {
+  padding: 5px 20px;
+  border: 1px solid gray;
+  width: fit-content;
+  margin-bottom: 10px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.legend-title {
+  color: white;
+  font-size: 13px;
+  text-align: center;
+}
+
+.legend .desc {
+  color: white;
+  font-size: 12px;
+}
+
+.table-responsive {
+  margin-bottom: 0px;
+  overflow-x: auto;
+}
+
+.container table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 0.7px solid #dddddd;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  padding: 5px 10px;
+  white-space: nowrap;
+  color: white;
+}
+
+/* No data eontainer */
+.no_data {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  z-index: 8;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.no_data p {
+  margin: 10px auto 0;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: sfpFontMedium;
+}

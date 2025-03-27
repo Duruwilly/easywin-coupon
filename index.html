@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <!-- top tab -->
+            <div class="coupon_tab topcenter">
+                <div class="boxflex coupon_tab_item sel" data-tab="sport">
+                    Sport Bonus
+                </div>
+                <div class="boxflex coupon_tab_item" data-tab="casino">
+                    Casino Bonus
+                </div>
+            </div>
+
+            <!-- bottom tab -->
+            <div class="coupon_tab_2j topcenter" id="bottomTabsContainer"></div>
+
+
+            <div class="sportCouponContent" id="sportCouponContent" style="display: block;">
+                <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                    <select name="" id="" class="filter">
+                        <option value="">Select</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Active">Active</option>
+                        <option value="Expired">Expired</option>
+                    </select>
+                </div>
+                <div class="ticket">
+                    <div class="ticket-container">
+                        <div style="display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+                            <div class="ticket-section">
+                                <div class="ticket-section">
+                                    <span class="ticket-label" style="font-size: 30px; font-weight: 500;">₦200</span>
+                                </div>
+                            </div>
+                            <div class="ticket-section">
+                                <span class="ticket-tier">Pending</span>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: flex-end; align-items: center; gap: 4px; position: absolute; bottom: 10px;">
+                                <p style="font-size: 10px;">More Details</p>
+                                <div class="toggle-arrow" onclick="toggleExplanation(this)">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ticket-details">
+                            <div class="ticket-section">
+                                <p class="ticket-label" style="font-weight: 600; font-size: 14px;">Ticket Title</p>
+                            </div>
+                            <div class="ticket-section">
+                                <span class="ticket-label">Balance: ₦200
+                                </span>
+                                <div class="expla-cont">
+                                    <i class="fa-regular fa-circle-question">
+                                    </i>
+                                    <span class="tooltip">The total amount you must stake to unlock your bonus</span>
+                                </div>
+                            </div>
+                            <div class="ticket-section">
+                                <span class="ticket-label">Requirement: ₦23,920
+                                </span>
+                                <div class="expla-cont">
+                                    <i class="fa-regular fa-circle-question">
+                                    </i>
+                                    <span class="tooltip">Winnings can only be withdrawn after meeting the staking
+                                        requirement.
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                                <div class="ticket-section">
+                                    <span class="ticket-label">Amount Staked: ₦80
+                                    </span>
+                                    <div class="expla-cont">
+                                        <i class="fa-regular fa-circle-question">
+                                        </i>
+                                        <span class="tooltip">The stake amount is determined by the coupon.</span>
+                                    </div>
+                                </div>
+                                <p class="percentage">0.33%</p>
+                            </div>
+                            <div class="ticket-section">
+                                <div class="track">
+                                    <div class="progress" style="width: 0.33%;"></div>
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <a href="staking-history.html" style="background: #007aff;">
+                                    <button>history</button>
+                                </a>
+                                <a href="" style="background-color: #82370b;">
+                                    <button>Play Now</button>
+                                </a>
+                            </div>
+
+                            <!-- <div class="separator"></div> -->
+                            <div class="rounded-shape"></div>
+                            <div class="rounded-shape2"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- explanation content here -->
+                    <div class="explanation-content">
+                        <ul>
+                            <li>Only valid for casino games</li>
+                            <li>Must meet the staking requirement to withdraw winnings.</li>
+                            <li>Use before the expiry date.</li>
+                            <li>Can be split into multiple bets until fully used.</li>
+                            <li>No refunds if a bet is canceled.</li>
+                            <li>No cashout, post-bet features, or extra bonuses.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ticket">
+                    <div class="ticket-container">
+                        <div style="height: 100%;">
+                            <div
+                                style="display: flex; flex-direction: column; justify-content: center; gap: 10px; flex: 1;">
+                                <div class="ticket-section">
+                                    <div class="ticket-section">
+                                        <span class="ticket-label"
+                                            style="font-size: 30px; font-weight: 500;">₦200</span>
+                                    </div>
+                                </div>
+                                <div class="ticket-section">
+                                    <span class="ticket-tier">Pending</span>
+                                </div>
+                            </div>
+                            <!-- arrow icon for bonus explanation here -->
+                            <div
+                                style="display: flex; justify-content: center; align-items: center; gap: 4px; margin-top: auto; position: absolute; bottom: 10px;">
+                                <p style="font-size: 10px;">More Details</p>
+                                <div class="toggle-arrow" onclick="toggleExplanation(this)">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ticket-details">
+                            <div class="ticket-section">
+                                <p class="ticket-label" style="font-weight: 600; font-size: 14px;">Ticket Title</p>
+                            </div>
+                            <div class="ticket-section">
+                                <span class="ticket-label">Balance: ₦200
+                                </span>
+                                <div class="expla-cont">
+                                    <i class="fa-regular fa-circle-question">
+                                    </i>
+                                    <span class="tooltip">The total amount you must stake to unlock your
+                                        bonus</span>
+                                </div>
+                            </div>
+                            <div class="ticket-section">
+                                <span class="ticket-label">Requirement: ₦200
+                                </span>
+                                <div class="expla-cont">
+                                    <i class="fa-regular fa-circle-question">
+                                    </i>
+                                    <span class="tooltip">Winnings can only be withdrawn after meeting the staking
+                                        requirement.
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                                <div class="ticket-section">
+                                    <span class="ticket-label" style="font-weight: 400;">Amount Staked: ₦200
+                                    </span>
+                                    <div class="expla-cont">
+                                        <i class="fa-regular fa-circle-question">
+                                        </i>
+                                        <span class="tooltip">The stake amount is determined by the coupon.</span>
+                                    </div>
+                                </div>
+                                <p class="percentage">100%</p>
+                            </div>
+                            <div class="ticket-section">
+                                <div class="track">
+                                    <div class="progress" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <a href="staking-history.html" style="background: #007aff;">
+                                    <button>history</button>
+                                </a>
+                                <a href="" style="background-color: #82370b;">
+                                    <button>Play Now</button>
+                                </a>
+                            </div>
+
+                            <!-- <div class="separator"></div> -->
+                            <div class="rounded-shape"></div>
+                            <div class="rounded-shape2"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- explanation content -->
+                    <div class="explanation-content">
+                        <ul>
+                            <li>Only valid for casino games</li>
+                            <li>Must meet the staking requirement to withdraw winnings.</li>
+                            <li>Use before the expiry date.</li>
+                            <li>Can be split into multiple bets until fully used.</li>
+                            <li>No refunds if a bet is canceled.</li>
+                            <li>No cashout, post-bet features, or extra bonuses.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sportFreebetContent" id="sportFreebetContent" style="display: none;">
+
+                <div class="ticket">
+                    <div class="ticket-container">
+                        <div style="display: flex; flex-direction: column; justify-content: center; gap: 10px;">
+                            <div class="ticket-section">
+                                <div class="ticket-section">
+                                    <span class="ticket-label" style="font-size: 30px; font-weight: 500;">₦200</span>
+                                </div>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: flex-end; align-items: center; gap: 4px; position: absolute; bottom: 10px;">
+                                <p style="font-size: 10px;">More Details</p>
+                                <div class="toggle-arrow" onclick="toggleExplanation(this)">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ticket-details">
+                            <div class="ticket-section">
+                                <p class="ticket-label" style="font-weight: 600; font-size: 14px;">Ticket Title</p>
+                            </div>
+                            <div class="ticket-section">
+                                <span class="ticket-label">Valid from: 23/02/2025
+                                </span>
+                            </div>
+                            <div class="ticket-section">
+                                <span class="ticket-label">Valid till: 23/02/2025
+                                </span>
+                                <div class="expla-cont">
+                                    <i class="fa-regular fa-circle-question">
+                                    </i>
+                                    <span class="tooltip">Winnings can only be withdrawn after meeting the staking
+                                        requirement.
+                                    </span>
+                                </div>
+                            </div>
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                                <div class="ticket-section">
+                                    <span class="ticket-label">Amount Staked: ₦80
+                                    </span>
+                                    <div class="expla-cont">
+                                        <i class="fa-regular fa-circle-question">
+                                        </i>
+                                        <span class="tooltip">The stake amount is determined by the coupon.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="button-container">
+                                <a href="staking-history.html" style="background: #007aff;">
+                                    <button>Use Now</button>
+                                </a>
+                            </div>
+
+                            <!-- <div class="separator"></div> -->
+                            <div class="rounded-shape"></div>
+                            <div class="rounded-shape2"></div>
+                        </div>
+
+                    </div>
+
+                    <!-- explanation content here -->
+                    <div class="explanation-content">
+                        <ul>
+                            <li>Only valid for casino games</li>
+                            <li>Must meet the staking requirement to withdraw winnings.</li>
+                            <li>Use before the expiry date.</li>
+                            <li>Can be split into multiple bets until fully used.</li>
+                            <li>No refunds if a bet is canceled.</li>
+                            <li>No cashout, post-bet features, or extra bonuses.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
