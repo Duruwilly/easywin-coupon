@@ -91,7 +91,7 @@ main {
   width: 100%;
   background-color: white;
   border-radius: 8px;
-  padding: 13px 20px;
+  padding: 5px 10px;
   position: relative;
   display: flex;
   align-items: center;
@@ -105,7 +105,7 @@ main {
   display: flex;
   flex-direction: column;
   /* gap: 6px; */
-  width: 69%;
+  width: 71%;
   border-left: 3px dashed #e4e4e4;
   padding-left: 10px;
 }
@@ -154,7 +154,7 @@ main {
   border-left: 3px dashed #e4e4e4;
   height: 100%;
   position: absolute;
-  left: 30%;
+  /* left: 40%; */
   top: 0;
   bottom: 0;
 }
@@ -162,8 +162,8 @@ main {
 .rounded-shape,
 .rounded-shape2 {
   position: absolute;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   background-color: #121212;
 }
@@ -172,14 +172,14 @@ main {
   top: -10px;
   /* top: 50%; */
   /* right: -10px; */
-  left: 30%;
+  left: 27%;
 }
 
 .rounded-shape2 {
   bottom: -10px;
   /* top: 50%; */
   /* left: -10px; */
-  left: 30%;
+  left: 27%;
 }
 
 /* tooltip */

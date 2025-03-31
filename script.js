@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // bottom tabs selection
   const bottomTabOptions = {
     sport: [
-      { id: "couponTab", text: "Coupon" },
+      { id: "couponTab", text: "Discount" },
       { id: "freebetTab", text: "Freebet" },
-      { id: "tab3", text: "Tab 3" },
+      { id: "tab3", text: "Bonus" },
     ],
     casino: [
-      { id: "couponTab", text: "Coupon" },
-      { id: "freebetTab", text: "Freebet" },
+      { id: "couponTab", text: "Bonus" },
+      // { id: "freebetTab", text: "Freebet" },
     ],
   };
 
