@@ -104,7 +104,7 @@ main {
 .ticket-details {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  /* gap: 6px; */
   width: 69%;
   border-left: 3px dashed #e4e4e4;
   padding-left: 10px;
@@ -123,6 +123,10 @@ main {
   font-size: 12px;
   color: #555;
   font-weight: 400;
+}
+
+.currency {
+  font-size: 15px;
 }
 
 .fa-circle-question {
@@ -165,15 +169,17 @@ main {
 }
 
 .rounded-shape {
-  /* top: -10px; */
-  top: 50%;
-  right: -10px;
+  top: -10px;
+  /* top: 50%; */
+  /* right: -10px; */
+  left: 30%;
 }
 
 .rounded-shape2 {
-  /* bottom: -10px; */
-  top: 50%;
-  left: -10px;
+  bottom: -10px;
+  /* top: 50%; */
+  /* left: -10px; */
+  left: 30%;
 }
 
 /* tooltip */
