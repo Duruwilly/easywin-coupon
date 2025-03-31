@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", function () {
   let currentTopTab = "sport"; // default selected top tab
   let currentBottomTab = "couponTab"; // default selected bottom tab
