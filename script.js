@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     sport: [
       { id: "couponTab", text: "Discount" },
       { id: "freebetTab", text: "Freebet" },
-      { id: "tab3", text: "Bonus" },
+      { id: "bonusTab", text: "Bonus" },
     ],
     casino: [
-      { id: "couponTab", text: "Bonus" },
+      { id: "bonusTab", text: "Bonus" },
       // { id: "freebetTab", text: "Freebet" },
     ],
   };
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function toggleSportCouponDropdown(show) {
-    const dropdown = document.getElementById("sportCouponContent");
+    const dropdown = document.getElementById("sportBonusContent");
     dropdown.style.display = show ? "block" : "none";
   }
 
@@ -69,15 +69,27 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdown.style.display = show ? "block" : "none";
   }
 
+  function toggleSportGiftDropdown(show) {
+    const dropdown = document.getElementById("casinoGiftContent");
+    dropdown.style.display = show ? "block" : "none";
+  }
+
   function checkDropdownVisibility() {
     // show dropdown only if sport bonus is selected and coupon is active
-    if (currentTopTab === "sport" && currentBottomTab === "couponTab") {
+    if (currentTopTab === "sport" && currentBottomTab === "bonusTab") {
       toggleSportCouponDropdown(true);
       toggleFreebetCouponDropdown(false);
+      toggleSportGiftDropdown(false);
     } else if (currentTopTab === "sport" && currentBottomTab === "freebetTab") {
       toggleFreebetCouponDropdown(true);
       toggleSportCouponDropdown(false);
+      toggleSportGiftDropdown(false);
+    } else if (currentTopTab === "casino" && currentBottomTab === "bonusTab") {
+      toggleSportGiftDropdown(true);
+      toggleFreebetCouponDropdown(false);
+      toggleSportCouponDropdown(false);
     } else {
+      toggleSportGiftDropdown(false);
       toggleFreebetCouponDropdown(false);
       toggleSportCouponDropdown(false);
     }
