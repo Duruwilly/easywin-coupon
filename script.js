@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   let currentTopTab = "sport"; // default selected top tab
-  let currentBottomTab = "couponTab"; // default selected bottom tab
+  let currentBottomTab = "discountTab"; // default selected bottom tab
 
   // bottom tabs selection
   const bottomTabOptions = {
     sport: [
-      { id: "couponTab", text: "Discount" },
+      { id: "discountTab", text: "Discount" },
       { id: "freebetTab", text: "Freebet" },
       { id: "bonusTab", text: "Bonus" },
     ],
@@ -74,24 +74,38 @@ document.addEventListener("DOMContentLoaded", function () {
     dropdown.style.display = show ? "block" : "none";
   }
 
+  function toggleSportDiscountDropdown(show) {
+    const dropdown = document.getElementById("sportDiscountContent");
+    dropdown.style.display = show ? "block" : "none";
+  }
+
   function checkDropdownVisibility() {
     // show dropdown only if sport bonus is selected and coupon is active
-    if (currentTopTab === "sport" && currentBottomTab === "bonusTab") {
+    if (currentTopTab === "sport" && currentBottomTab === "discountTab") {
+      toggleSportDiscountDropdown(true);
+      toggleSportCouponDropdown(false);
+      toggleFreebetCouponDropdown(false);
+      toggleSportGiftDropdown(false);
+    } else if (currentTopTab === "sport" && currentBottomTab === "bonusTab") {
       toggleSportCouponDropdown(true);
+      toggleSportDiscountDropdown(false);
       toggleFreebetCouponDropdown(false);
       toggleSportGiftDropdown(false);
     } else if (currentTopTab === "sport" && currentBottomTab === "freebetTab") {
       toggleFreebetCouponDropdown(true);
       toggleSportCouponDropdown(false);
       toggleSportGiftDropdown(false);
+      toggleSportDiscountDropdown(false);
     } else if (currentTopTab === "casino" && currentBottomTab === "bonusTab") {
       toggleSportGiftDropdown(true);
       toggleFreebetCouponDropdown(false);
       toggleSportCouponDropdown(false);
+      toggleSportDiscountDropdown(false);
     } else {
       toggleSportGiftDropdown(false);
       toggleFreebetCouponDropdown(false);
       toggleSportCouponDropdown(false);
+      toggleSportDiscountDropdown(false);
     }
   }
 
