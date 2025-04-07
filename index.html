@@ -32,14 +32,79 @@
             <div style="display: flex; flex-direction: column; align-items: flex-end;">
                 <select name="" id="" class="filter">
                     <option value="">Select</option>
-                    <option value="Pending">Pending</option>
                     <option value="Active">Active</option>
+                    <option value="Pending">Used</option>
                     <option value="Expired">Expired</option>
                 </select>
             </div>
 
             <!-- sport discount tab -->
             <div class="sportDiscountContent" id="sportDiscountContent" style="display: block;">
+
+                <div class="ticket">
+                    <div style="display: flex;">
+                        <div
+                            style="display: flex; flex-direction: column; justify-content: center; gap: 6px; margin-top: 30px; width: 30%; background-color: #c4c0c0; border-radius: 8px; padding: 5px 10px;">
+                            <div class=" ticket-section">
+                                <span class="ticket-label"
+                                    style="font-size: 32px; font-weight: 500; font-family: dinFont;">
+                                    <span class="currency">₦</span>200<span class="currency">OFF</span>
+                                </span>
+                            </div>
+                            <div>
+                                <p style="font-weight: 400; font-size: 10px;">₦500 min.stake</p>
+                            </div>
+                        </div>
+                        <div
+                            style="margin-top: 30px; width: 70%; background-color: #fff; border-radius: 8px; padding: 5px 10px; display: flex; align-items: center; justify-content: space-between; position: relative;">
+
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; border-left: 0px; flex: 1;">
+                                <div>
+                                    <div class="ticket-section" style="margin-bottom: 10px;">
+                                        <p class="ticket-label" style="font-weight: 600; font-size: 14px;">Ticket Title
+                                        </p>
+                                    </div>
+                                    <div class="ticket-section" style="margin-bottom: 12px;">
+                                        <span class="ticket-label" style="font-size: 10px;">Valid from: 23/02/2025
+                                        </span>
+                                    </div>
+                                    <div class="ticket-section">
+                                        <span class="ticket-label" style="font-size: 10px;">Valid till: 23/02/2025
+                                        </span>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 4px; margin-top: 10px;">
+                                        <p style="font-size: 10px;">Usage Rules</p>
+                                        <div class="toggle-arrow" onclick="toggleExplanation(this)">
+                                            <i class="fa-solid fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="button-container">
+                                    <a href="" style="background: #c4c0c0">
+                                        <button>Used</button>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- explanation content here -->
+                    <div class="explanation-content">
+                        <ul>
+                            <p>Special Customer Reward</p>
+                            <li>Can be used on Sports betting only</li>
+                            <li>Can't be used on Markets DNB,HNB,ANB</li>
+                            <li>Each Selection must have an odd equal to or grater than 1.2</li>
+                            <li>Total betslip odds must be greater than 3</li>
+                            <li>₦500 minimum stake required</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <!-- use now or active discount ticket -->
                 <div class="ticket">
                     <div class="ticket-container">
@@ -438,6 +503,113 @@
             <!-- sport bonus tab -->
             <div class="sportBonusContent" id="sportBonusContent" style="display: none;">
                 <!-- use now or active bonus ticket -->
+
+                <div class="ticket">
+                    <div style="display: flex;">
+                        <div
+                            style="display: flex; flex-direction: column; justify-content: center; gap: 6px; margin-top: 30px; width: 30%; background-color: #c4c0c0; border-radius: 8px; padding: 5px 10px; position: relative;">
+                            <div class="ticket-section">
+                                <span class="ticket-label"
+                                    style="font-size: 32px; font-weight: 500; font-family: dinFont"><span
+                                        class="currency">₦</span>200</span>
+                            </div>
+                            <div class="ticket-section">
+                                <span class="ticket-tier">Used</span>
+                            </div>
+                            <div
+                                style="display: flex; align-items: center; gap: 4px; position: absolute; bottom: 10px; left: 3%;">
+                                <p style="font-size: 10px;">More Details</p>
+                                <div class="toggle-arrow" onclick="toggleExplanation(this)">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="margin-top: 30px; width: 70%; background-color: #fff; border-radius: 8px; padding: 5px 10px; display: flex; align-items: center; justify-content: space-between; position: relative;">
+
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; border-left: 0px; flex: 1;">
+                                <div style="flex: 1">
+                                    <div>
+                                        <div class="ticket-section" style="margin-bottom: 5px;">
+                                            <p class="ticket-label" style="font-weight: 600; font-size: 14px;">
+                                                Registration
+                                                Bonus</p>
+                                        </div>
+                                        <p class="ticket-label" style="font-size: 10px;">Valid till: 24/02/2025</p>
+                                    </div>
+
+
+                                    <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 3px;">
+                                        <div class="ticket-section">
+                                            <span class="ticket-label">Balance: ₦200
+                                            </span>
+                                            <div class="expla-cont">
+                                                <i class="fa-regular fa-circle-question"></i>
+                                                <span class="tooltip">Remaining amount to stake. Cannot be
+                                                    withdrawn.</span>
+                                            </div>
+                                        </div>
+                                        <div class="ticket-section">
+                                            <span class="ticket-label">Requirement: ₦23,920
+                                            </span>
+                                            <div class="expla-cont">
+                                                <i class="fa-regular fa-circle-question">
+                                                </i>
+                                                <span class="tooltip">Total stake needed to unlock the bonus.
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div
+                                            style="display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
+                                            <div class="ticket-section">
+                                                <span class="ticket-label">Amount Staked: ₦80
+                                                </span>
+                                                <div class="expla-cont">
+                                                    <i class="fa-regular fa-circle-question">
+                                                    </i>
+                                                    <span class="tooltip">Amount wagered so far.</span>
+                                                </div>
+                                            </div>
+                                            <!-- <p class="percentage">0.33%</p> -->
+                                        </div>
+                                        <div class="ticket-section">
+                                            <div class="track">
+                                                <div class="progress" style="width: 0.33%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="button-container">
+                                        <a href="staking-history.html" style="background: #c4c0c0;">
+                                            <button>history</button>
+                                        </a>
+                                        <a href="" style="background-color: #c4c0c0;">
+                                            <button>Used</button>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <p class="percentage">0.33%</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- explanation content here -->
+                    <div class="explanation-content">
+                        <ul>
+                            <li>⁠Bonus starts as your balance and is for casino bets only.</li>
+                            <li>Winnings stay locked until the requirement is met.</li>
+                            <li>Once met, the bonus moves to your withdrawable balance.</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="ticket">
                     <div class="ticket-container">
                         <div style="display: flex; flex-direction: column; justify-content: center; gap: 10px;">
@@ -447,7 +619,7 @@
                                         class="currency">₦</span>200</span>
                             </div>
                             <div class="ticket-section">
-                                <span class="ticket-tier">Pending</span>
+                                <span class="ticket-tier">Active</span>
                             </div>
                             <div
                                 style="display: flex; justify-content: flex-end; align-items: center; gap: 4px; position: absolute; bottom: 10px; left: 3%;">
@@ -466,6 +638,8 @@
                                 </div>
                                 <p class="ticket-label" style="font-size: 10px;">Valid till: 24/02/2025</p>
                             </div>
+
+
                             <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 3px;">
                                 <div class="ticket-section">
                                     <span class="ticket-label">Balance: ₦200
@@ -505,6 +679,8 @@
                                 </div>
 
                             </div>
+
+
                             <div class="button-container">
                                 <a href="staking-history.html" style="background: #007aff;">
                                     <button>history</button>
@@ -543,7 +719,7 @@
                                             class="currency">₦</span>200</span>
                                 </div>
                                 <div class="ticket-section">
-                                    <span class="ticket-tier">Pending</span>
+                                    <span class="ticket-tier">Active</span>
                                 </div>
                             </div>
                             <!-- arrow icon for bonus explanation here -->
@@ -642,7 +818,7 @@
                                             class="currency">₦</span>200</span>
                                 </div>
                                 <div class="ticket-section">
-                                    <span class="ticket-tier">Pending</span>
+                                    <span class="ticket-tier">Used</span>
                                 </div>
                             </div>
                             <!-- arrow icon for bonus explanation here -->
@@ -729,7 +905,7 @@
                     </div>
                 </div>
 
-                <!-- used bonus ticket -->
+                <!-- expired bonus ticket -->
                 <div class="ticket">
                     <div class="ticket-container">
                         <div style="height: 100%;">
@@ -741,7 +917,7 @@
                                             class="currency">₦</span>200</span>
                                 </div>
                                 <div class="ticket-section">
-                                    <span class="ticket-tier">Pending</span>
+                                    <span class="ticket-tier">Expired</span>
                                 </div>
                             </div>
                             <!-- arrow icon for bonus explanation here -->
@@ -841,7 +1017,7 @@
                                         class="currency">₦</span>200</span>
                             </div>
                             <div class="ticket-section">
-                                <span class="ticket-tier">Pending</span>
+                                <span class="ticket-tier">Active</span>
                             </div>
                             <div
                                 style="display: flex; justify-content: flex-end; align-items: center; gap: 4px; position: absolute; bottom: 10px; left: 3%;">
@@ -937,7 +1113,7 @@
                                             class="currency">₦</span>200</span>
                                 </div>
                                 <div class="ticket-section">
-                                    <span class="ticket-tier">Pending</span>
+                                    <span class="ticket-tier">Active</span>
                                 </div>
                             </div>
                             <!-- arrow icon for bonus explanation here -->
@@ -1036,7 +1212,7 @@
                                             class="currency">₦</span>200</span>
                                 </div>
                                 <div class="ticket-section">
-                                    <span class="ticket-tier">Pending</span>
+                                    <span class="ticket-tier">Used</span>
                                 </div>
                             </div>
                             <!-- arrow icon for bonus explanation here -->
@@ -1123,7 +1299,7 @@
                     </div>
                 </div>
 
-                <!-- used bonus ticket -->
+                <!-- expired bonus ticket -->
                 <div class="ticket">
                     <div class="ticket-container">
                         <div style="height: 100%;">
@@ -1135,7 +1311,7 @@
                                             class="currency">₦</span>200</span>
                                 </div>
                                 <div class="ticket-section">
-                                    <span class="ticket-tier">Pending</span>
+                                    <span class="ticket-tier">Expired</span>
                                 </div>
                             </div>
                             <!-- arrow icon for bonus explanation here -->

@@ -257,7 +257,7 @@ main {
 }
 
 /* button */
-.ticket-details .button-container {
+.button-container {
   display: flex;
   flex-direction: row;
   align-items: center;
