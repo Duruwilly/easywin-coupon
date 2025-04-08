@@ -62,7 +62,7 @@ main {
 /* bottom tab */
 .coupon_tab_2j {
   overflow: hidden;
-  margin: 10px -15px 15px;
+  /* margin: 10px -15px 15px; */
 }
 
 .coupon_tab_2j .coupon_tab_item {
