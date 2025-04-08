@@ -81,35 +81,57 @@ main {
 /* sport ticket */
 .sportBonusContent,
 .sportFreebetContent,
-.sportDiscountContent
-.casinoGiftContent {
+.sportDiscountContent .casinoGiftContent {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
 .ticket-container {
+  display: flex;
+}
+
+.ticket-left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
   margin-top: 30px;
-  width: 100%;
-  background-color: white;
-  border-radius: 8px;
+  width: 30%;
+  background-color: #c4c0c0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
   padding: 5px 10px;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  /* cursor: pointer; */
-  position: relative;
-  /* overflow: hidden; */
 }
 
 .ticket-details {
+  margin-top: 30px;
+  width: 70%;
+  background-color: #fff;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 5px 10px;
   display: flex;
-  flex-direction: column;
-  /* gap: 6px; */
-  width: 72%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
   border-left: 3px dashed #e4e4e4;
-  padding-left: 10px;
+}
+
+.ticket-details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.toggle-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
 }
 
 .ticket-section {
@@ -145,22 +167,6 @@ main {
   text-overflow: ellipsis;
 }
 
-.ticket-tier {
-  /* color: #15803d; */
-  color: lightcoral;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.separator {
-  border-left: 3px dashed #e4e4e4;
-  height: 100%;
-  position: absolute;
-  /* left: 40%; */
-  top: 0;
-  bottom: 0;
-}
-
 .rounded-shape,
 .rounded-shape2 {
   position: absolute;
@@ -172,16 +178,12 @@ main {
 
 .rounded-shape {
   top: -10px;
-  /* top: 50%; */
-  /* right: -10px; */
-  left: 27%;
+  left: -10px;
 }
 
 .rounded-shape2 {
   bottom: -10px;
-  /* top: 50%; */
-  /* left: -10px; */
-  left: 27%;
+  left: -10px;
 }
 
 /* tooltip */
@@ -206,26 +208,6 @@ main {
   white-space: normal;
   font-family: sfpFontRegular, Verdana, Arial, Helvetica, sans-serif;
 }
-
-/* tooltip */
-/* .tooltip {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 5px;
-  font-size: 12px;
-  white-space: nowrap;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  top: 150%;
-  width: fit-content;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  font-family: "Inter", sans-serif;
-} */
 
 /* tooltip on hover */
 .expla-cont:hover .tooltip {
